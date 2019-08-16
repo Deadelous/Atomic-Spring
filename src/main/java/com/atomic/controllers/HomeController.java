@@ -1,4 +1,4 @@
-package com.atomic.controller;
+package com.atomic.controllers;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -6,7 +6,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @RequestMapping("/")
+    public HomeController() {
+
+    }
+
+    @RequestMapping( "/")
     public String home() {
         return "Atomic design welcome";
     }
