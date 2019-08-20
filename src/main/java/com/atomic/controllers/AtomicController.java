@@ -23,7 +23,7 @@ public class AtomicController {
     }
 
     @GetMapping("/atomics/{id}")
-    public ResponseEntity get(@PathVariable("id") Long id) {
+    public ResponseEntity get(@PathVariable("id") Integer id) {
         try {
             Atomic atomic = atomicRepository.getOne(id);
             return ResponseEntity.status(HttpStatus.OK).body(atomic);
@@ -41,7 +41,7 @@ public class AtomicController {
     }
 
     @DeleteMapping("/atomics/{atomicId}")
-    public ResponseEntity delete(@PathVariable Long atomicId) {
+    public ResponseEntity delete(@PathVariable Integer atomicId) {
         atomicRepository.deleteById(atomicId);
 
         return ResponseEntity.status(HttpStatus.OK).body("atom deleted with this id: " + atomicId);

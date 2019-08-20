@@ -23,7 +23,7 @@ public class CategoryController {
     }
 
     @GetMapping("/categories/{id}")
-    public ResponseEntity get(@PathVariable("id") Long id) {
+    public ResponseEntity get(@PathVariable("id") Integer id) {
         try {
             Category category = categoryRepository.getOne(id);
             return ResponseEntity.status(HttpStatus.OK).body(category);
@@ -41,7 +41,7 @@ public class CategoryController {
     }
 
     @DeleteMapping("/categories/{categoryId}")
-    public ResponseEntity delete(@PathVariable Long categoryId) {
+    public ResponseEntity delete(@PathVariable Integer categoryId) {
         categoryRepository.deleteById(categoryId);
 
         return ResponseEntity.status(HttpStatus.OK).body("Category deleted with this id: " + categoryId);

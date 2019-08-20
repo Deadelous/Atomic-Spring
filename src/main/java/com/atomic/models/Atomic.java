@@ -10,9 +10,11 @@ public class Atomic {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "description")
     private String description;
 
@@ -20,18 +22,18 @@ public class Atomic {
 
     }
 
-    public Atomic(Long  id, String name, String description) {
+    public Atomic(Integer id, String name, String description) {
         this.id = id;
         this.name = name;
         this.description = description;
 
     }
 
-    public Long  getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long  id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Atomic-Spring" />
         <module name="spring-atomic" />
         <module name="atomic-backend" />
       </profile>
@@ -13,6 +14,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Atomic-Spring" options="-parameters" />
       <module name="atomic-backend" options="-parameters" />
       <module name="spring-atomic" options="-parameters" />
     </option>
